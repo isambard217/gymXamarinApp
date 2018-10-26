@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    BackgroundColor="#127ac7"
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="WeActiveApp.View.Login.Register">
+
+    <!-- You can change the intent to other options
+    Intent is an enumeration -->
+    <TableView Intent="Form">
+        <TableRoot>
+                <TableSection>              
+                    <!--<TextCell Text="Name" Detail="Mosh hamedani"/>
+                    <SwitchCell Text="Notifications" On="true"/> -->
+                    <EntryCell Text="{ Binding Firstname, Mode=TwoWay }" Label = "Firstname" Placeholder="Firstname"/>
+                    <EntryCell Text="{ Binding Surname, Mode=TwoWay }" Label = "Surname" Placeholder="Surname"/> 
+                    <EntryCell Text="{ Binding Email }" Label="Email" Placeholder="Email" />       
+                    <EntryCell Text= "{ Binding Password } " Label="Password" Placeholder="Password" />
+                    <EntryCell Text= "{ Binding ConfirmPassword }" Label="Confirm Password" Placeholder="ConfirmPassword" />
+                        
+                    <ViewCell>
+                        <Button Text="Submit" BackgroundColor="Purple" Clicked="Register_User"/>
+                    </ViewCell>
+                </TableSection>
+        </TableRoot>    
+    </TableView>
+    
+</ContentPage>

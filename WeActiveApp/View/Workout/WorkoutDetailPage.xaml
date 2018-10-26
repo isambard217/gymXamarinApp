@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    Title="{ Binding Name }"
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="WeActiveApp.View.Workout.WorkoutDetailPage">
+
+    <StackLayout>
+        
+        <Label FontAttributes="Bold" Text="Name"/>
+        <Label Text="{Binding Name}"/>
+        <Label FontAttributes="Bold" Text="Duration"/>
+        <Label Text="{Binding Duration }"/>
+        <Label FontAttributes="Bold" Text="Location"/>
+        <Label Text="{Binding Location }"/>
+        <Label FontAttributes="Bold" Text="Workout Creator "/>
+        <Label Text="{Binding WorkOutCreatorName}"/>
+        <Label FontAttributes="Bold" Text="Equipment "/>
+        <Label Text="{Binding Equipment}"/>
+        <Label FontAttributes="Bold" Text="Workout Status"/>
+        <Label Text="{Binding Status}"/>
+
+        <Button Text="Join Workout " Clicked="Join_Workout"/>
+
+    </StackLayout>
+    
+</ContentPage>

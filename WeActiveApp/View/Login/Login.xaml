@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    BackgroundColor="#127ac7"
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="WeActiveApp.View.Login.Login">
+       
+    <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Spacing="20">
+        <Label 
+            Text="WeActive"
+            TextColor="White"
+            FontSize="30" 
+            FontAttributes="Bold"  
+            HorizontalOptions="Center" />
+        
+        <Label 
+            Text="Join the fitness community" 
+            TextColor="White"
+            FontSize="18" 
+            HorizontalOptions="Center" />
+
+         <Entry 
+            Text="{Binding Email}" 
+            Placeholder="email"
+            />
+
+         <Entry 
+            Text="{Binding Password}" 
+            Placeholder="password"
+            IsPassword="true" />
+        
+        <Button 
+            Text="Login" 
+            TextColor="White"
+            BackgroundColor="#1dabf0" 
+            Clicked="Login_Clicked"
+            />
+
+            <!--Command="{ Binding LoginUserCommand }" -->
+        <Label 
+            Text="Or"
+            HorizontalOptions="Center" 
+            TextColor="White"/>
+        
+        <Button 
+            Text="Register" 
+            TextColor="White"
+            BackgroundColor="#1dabf0"
+            Clicked="Register_Clicked" />
+        
+    </StackLayout>
+      
+
+</ContentPage>

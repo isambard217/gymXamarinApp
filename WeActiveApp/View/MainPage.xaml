@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="WeActiveApp.View.MainPage"
+    xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions">
+
+        <RelativeLayout>
+        
+        <BoxView BackgroundColor="#7FFFD4" x:Name="banner"
+            RelativeLayout.HeightConstraint="{ConstraintExpression 
+                Type=RelativeToParent,
+                Property=Height,
+                Factor=0.3}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression
+                Type=RelativeToParent,
+                Property=Width,
+                Factor=1}" />
+
+        <!-- Profile image
+        <controls:CircleImage 
+         RelativeLayout.YConstraint="{ConstraintExpression
+                            Type=RelativeToView,
+                            ElementName=banner,
+                            Property=Height,
+                            Factor=0.5 }"
+                        RelativeLayout.XConstraint="{ConstraintExpression
+                            Type=RelativeToView,
+                            ElementName=banner,
+                            Property=Width,
+                            Factor=0.45
+                            }"
+
+            Source="http://lorempixel.com/100/100/people/2/" Aspect="AspectFill">
+                      <controls:CircleImage.WidthRequest>
+                        <OnPlatform x:TypeArguments="x:Double">
+                          <On Platform="Android, iOS">55</On>
+                          <On Platform="WinPhone">75</On>
+                        </OnPlatform>
+                      </controls:CircleImage.WidthRequest>
+                      <controls:CircleImage.HeightRequest>
+                        <OnPlatform x:TypeArguments="x:Double">
+                          <On Platform="Android, iOS">55</On>
+                          <On Platform="WinPhone">75</On>
+                        </OnPlatform>
+                      </controls:CircleImage.HeightRequest>
+        </controls:CircleImage>
+         End profile Image -->           
+  
+        
+        <StackLayout 
+            Orientation="Horizontal"
+            HorizontalOptions="Center"
+            BackgroundColor="Lime"
+            RelativeLayout.WidthConstraint="{ConstraintExpression
+                Type=RelativeToParent,
+                Property=Width,
+                Factor=1}"
+                
+            RelativeLayout.YConstraint="{ConstraintExpression
+                Type=RelativeToView,
+                ElementName=banner,
+                Property=Height,
+                Factor=1,
+                Constant=30}">
+                        
+                <Button 
+                    Clicked="Join_Workout"
+                    Text="Join Workouts" 
+                    TextColor="Black"
+                    HorizontalOptions="Center"
+                    FontAttributes="Bold" 
+                    FontSize="15" 
+                    BackgroundColor="Aqua"/>
+
+                <Button 
+                    Clicked="Create_Workout"
+                    Text="Create Workout"
+                    TextColor="Black"
+                    HorizontalOptions="Center"
+                    FontAttributes="Bold"
+                    FontSize="16"
+                    BackgroundColor="Aqua" />
+            
+        </StackLayout>
+        
+    </RelativeLayout>
+</ContentPage>
+
+
